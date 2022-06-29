@@ -14,7 +14,7 @@ def executionWrapper(line):
 
     # Catches the error if the input is not a valid string
     except:
-        return 'The string is not valid.'
+        return f'\n###### {line} ---> Not a valid string!\n'
 
 
 def main():
