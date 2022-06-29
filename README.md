@@ -46,9 +46,45 @@ The main module has a function called executionWrapper that instanciates the Emp
 | RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00        | The amount to pay RENE is: 215 USD |
 | ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00                                  | The amount to pay ASTRID is: 85 USD|
 
+##
 - parseHours
 
 | Input                                                                             | Output                             |
 | ----------------------------------------------------------------------------------| ---------------------------------- |
-| RENE=MO10:00-12:00,TU10:00-12:00,TH01:00-03:00,SA14:00-18:00,SU20:00-21:00        | The amount to pay RENE is: 215 USD |
-| ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00                                  | The amount to pay ASTRID is: 85 USD|
+| 'SA08:00-00:00'        | [([datetime.datetime(1900, 1, 1, 8, 0), datetime.datetime(1900, 1, 1, 9, 0)], 30),([datetime.datetime(1900, 1, 1, 9, 0), datetime.datetime(1900, 1, 1, 18, 0)], 20), ([datetime.datetime(1900, 1, 1, 18, 0), datetime.datetime(1900, 1, 2, 0, 0)], 25)]|
+
+##
+- countHours
+
+| Input                                                                             | Output                             |
+| ----------------------------------------------------------------------------------| ---------------------------------- |
+| [([datetime.datetime(1900, 1, 1, 8, 0), datetime.datetime(1900, 1, 1, 9, 0)], 30),([datetime.datetime(1900, 1, 1, 9, 0), datetime.datetime(1900, 1, 1, 18, 0)], 20), ([datetime.datetime(1900, 1, 1, 18, 0), datetime.datetime(1900, 1, 2, 0, 0)], 25)]        | [{'Hours': 1, 'Minutes': 0, 'Rate': 30}, {'Hours': 9, 'Minutes': 0, 'Rate': 20},{'Hours': 6, 'Minutes': 0, 'Rate': 25}]|
+
+##
+
+### Tests
+The test folder in this repository contains the unit tests for the Employee.calculatePay method (TestEmployeeString.py), for the parseHours and countHours functions (TestModules.py)
+
+To run these tests it's necessary to have Pytest installed.
+
+#### Installing Pytest
+Run in the terminal:
+```
+$ pip install pytest
+```
+or run the following command in the root directory of this repository:
+```
+$ pip install -r requirements.txt
+```
+
+
+#### Running Tests
+Testing EmployeeString.calculatePay method:
+
+```
+$ pytest TestEmployeeString.py
+```
+Testing parseHours and countHours functions:
+```
+$ pytest TestModules.py
+```
