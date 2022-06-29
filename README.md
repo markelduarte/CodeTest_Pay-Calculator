@@ -63,7 +63,7 @@ The main module has a function called executionWrapper that instanciates the Emp
 ##
 
 ### Tests
-The test folder in this repository contains the unit tests for the Employee.calculatePay method (TestEmployeeString.py), for the parseHours and countHours functions (TestModules.py)
+The test folder in this repository contains the unit tests for the Employee.calculatePay method (TestEmployeeString.py) and for the parseHours and countHours functions (TestModules.py)
 
 To run these tests it's necessary to have Pytest installed.
 
@@ -72,7 +72,7 @@ Run in the terminal:
 ```
 $ pip install pytest
 ```
-or run the following command in the root directory of this repository:
+or run the following command in the root directory of this project:
 ```
 $ pip install -r requirements.txt
 ```
