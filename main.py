@@ -8,12 +8,13 @@ filename = sys.argv[1]
 def executionWrapper(line):
     try:
         employee = EmployeeString(line.strip())
-        pay = '{:.0f}'.format(employee.calculatePay())
+        pay = employee.calculatePay()
+        pay = '{:.0f}'.format(pay) if float(pay).is_integer() else '{:.2f}'.format(pay)
         return f'The amount to pay {employee.name} is: {pay} USD'
 
     # Catches the error if the input is not a valid string
     except:
-        return 'Invalid String'
+        return 'The string is not valid.'
 
 
 def main():

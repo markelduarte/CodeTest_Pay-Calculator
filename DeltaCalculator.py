@@ -1,7 +1,3 @@
-# from HoursParser import parseHours
-# from datetime import datetime
-# import re
-
 
 # Takes the return from the parseHours function and calculates the number of hours worked
 def countHours(hoursArray):
@@ -32,18 +28,3 @@ def countHours(hoursArray):
 
     return timeBlocks
 
-# print(countHours('MO10:00-12:00'))
-# print()
-# print(countHours('MO18:00-00:00'))
-# print()
-# print(countHours('MO18:00-18:30'))
-# print()
-# print(countHours('MO08:00-18:30'))
-# print()
-# print(countHours('MO00:00-00:01'))
-# print()
-# print(countHours('MO00:00-00:00'))
-# print()
-# print(countHours('MO08:00-00:30')) #False
-
-# print(countHours(parseHours('SA08:00-00:00')))

@@ -82,19 +82,3 @@ def parseHours(hoursString):
     return splitHours
 
 
-    
-
-# print(parseHours('MO10:00-12:00'))
-# print()
-# print(parseHours('TU18:00-00:00'))
-# print()
-# print(parseHours('WE18:00-18:30'))
-# print()
-# print(parseHours('TH08:00-18:30'))
-# print()
-# print(parseHours('FR00:00-00:00'))
-# print()
-# print(parseHours('SA08:00-00:00'))
-# print()
-# print(parseHours('SU08:00-00:30')) #False
-
