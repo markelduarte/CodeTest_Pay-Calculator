@@ -76,6 +76,7 @@ or run the following command in the root directory of this project:
 ```
 $ pip install -r requirements.txt
 ```
+* Pytest is the only dependency in the requirements.txt file. 
 
 
 #### Running Tests
